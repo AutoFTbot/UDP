@@ -68,3 +68,9 @@ UDP Custom Oleh ePro Dev. Team.
     ```sh
     ./install.sh
     ```
+
+## Video Tutorial
+
+Untuk panduan visual tentang cara menggunakan Manajer UDP Kustom, lihat video berikut:
+
+[![Tonton Video](https://github.com/AutoFTbot/UDP/blob/main/Termius%20-%20152.42.230.176%20(1)%202024-08-10%2014-41-49.mp4)](Video)
