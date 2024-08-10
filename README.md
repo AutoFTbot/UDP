@@ -1,36 +1,36 @@
-# UDP Custom Manager
+# Manajer UDP Kustom
 
-## Overview
+## Gambaran Umum
 
-The "UDP Custom Manager" script enables UDP on a 64-bit VPS, provides functionalities to create, view, and manage custom users, and sets up VPN tunnels using the HTTP Custom app.
+Skrip "Manajer UDP Kustom" mengaktifkan UDP pada VPS 64-bit, menyediakan fungsionalitas untuk membuat, melihat, dan mengelola pengguna kustom, serta menyiapkan terowongan VPN menggunakan aplikasi HTTP Custom.
 
-## Features
+## Fitur
 
-- **Enable UDP**: Configures and enables UDP on a 64-bit VPS.
-- **User Management**: Allows the creation, viewing, and management of custom users.
-- **VPN Tunnels**: Sets up VPN tunnels using the HTTP Custom app.
+- **Aktifkan UDP**: Mengonfigurasi dan mengaktifkan UDP pada VPS 64-bit.
+- **Manajemen Pengguna**: Memungkinkan pembuatan, tampilan, dan pengelolaan pengguna kustom.
+- **Terowongan VPN**: Menyiapkan terowongan VPN menggunakan aplikasi HTTP Custom.
 
-## Prerequisites
+## Prasyarat
 
-- A 64-bit VPS
-- Necessary permissions to modify network settings
-- Installed HTTP Custom app
+- VPS 64-bit
+- Hak akses yang diperlukan untuk memodifikasi pengaturan jaringan
+- Aplikasi HTTP Custom yang sudah terpasang
 
-## Installation
+## Instalasi
 
-1. Download and run the installation script:
+1. Unduh dan jalankan skrip instalasi:
     ```sh
     wget "https://raw.githubusercontent.com/AutoFTbot/UDP/main/install.sh" -O install.sh && chmod +x install.sh && bash install.sh
     ```
 
-## Usage
+## Penggunaan
 
-1. **Access the SSLAB UDP Panel**:
+1. **Akses Panel SSLAB UDP**:
     ```sh
     menu
     ```
 
-## Credit
+## Kredit
 
-This UDP Custom Manager script is made by Project AutoFtBot.
-UDP Custom By ePro Dev. Team.
+Skrip Manajer UDP Kustom ini dibuat oleh Proyek AutoFtBot.
+UDP Custom Oleh ePro Dev. Team.
