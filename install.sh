@@ -1,16 +1,17 @@
 #!/bin/bash
 
 # Update dan upgrade
+echo "Memperbarui daftar paket..."
 apt update -y
+echo "Mengupgrade paket..."
 apt upgrade -y
 
 # Instalasi paket
-apt install lolcat -y
-apt install figlet -y
-apt install neofetch -y
-apt install screenfetch -y
+echo "Menginstal paket tambahan..."
+apt install lolcat figlet neofetch screenfetch -y
 
 # Setup direktori
+echo "Menyetel direktori..."
 cd
 rm -rf /root/udp
 mkdir -p /root/udp
@@ -29,19 +30,20 @@ echo ""
 sleep 5
 
 # Ubah zona waktu
-echo "Changing time zone to GMT+7:00 Jakarta"
+echo "Mengubah zona waktu ke GMT+7:00 Jakarta"
 ln -fs /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
 
 # Instalasi udp-custom
-echo "Downloading udp-custom"
+echo "Mengunduh udp-custom..."
 wget "https://github.com/AutoFTbot/UDP/raw/main/udp-custom-linux-amd64" -O /root/udp/udp-custom
 chmod +x /root/udp/udp-custom
 
-echo "Downloading default config"
+echo "Mengunduh konfigurasi default..."
 wget "https://raw.githubusercontent.com/AutoFTbot/UDP/main/config.json" -O /root/udp/config.json
 chmod 644 /root/udp/config.json
 
 # Buat file service
+echo "Membuat file service systemd..."
 if [ -z "$1" ]; then
 cat <<EOF > /etc/systemd/system/udp-custom.service
 [Unit]
@@ -85,6 +87,7 @@ echo ''
 sleep 5
 
 # Instalasi sistem tambahan
+echo "Mengunduh dan menyiapkan sistem tambahan..."
 cd $HOME
 mkdir -p /etc/AutoFtBot
 cd /etc/AutoFtBot
@@ -92,12 +95,7 @@ wget https://github.com/AutoFTbot/UDP/raw/main/system.zip
 unzip system.zip
 cd /etc/AutoFtBot/system
 mv menu /usr/local/bin
-chmod +x ChangeUser.sh
-chmod +x Adduser.sh
-chmod +x DelUser.sh
-chmod +x Userlist.sh
-chmod +x RemoveScript.sh
-chmod +x torrent.sh
+chmod +x ChangeUser.sh Adduser.sh DelUser.sh Userlist.sh RemoveScript.sh torrent.sh
 cd /usr/local/bin
 chmod +x menu
 cd /etc/AutoFtBot
@@ -114,12 +112,12 @@ echo "Telegram/AutoFTbot"
 sleep 5
 
 # Mulai dan aktifkan layanan
-echo "Starting udp-custom service"
+echo "Memulai layanan udp-custom..."
 systemctl start udp-custom &>/dev/null
 
-echo "Enabling udp-custom service"
+echo "Mengaktifkan layanan udp-custom..."
 systemctl enable udp-custom &>/dev/null
 
 # Reboot sistem
-echo "Rebooting system"
+echo "Mereboot sistem..."
 reboot
