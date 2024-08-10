@@ -32,5 +32,39 @@ Skrip "Manajer UDP Kustom" mengaktifkan UDP pada VPS 64-bit, menyediakan fungsio
 
 ## Kredit
 
-Skrip Manajer UDP Kustom ini dibuat oleh Proyek AutoFtBot.
+Skrip Manajer UDP Kustom ini dibuat oleh Proyek AutoFtBot.  
 UDP Custom Oleh ePro Dev. Team.
+
+## Cara Instalasi Skrip
+
+1. **Unduh Skrip Instalasi**
+
+   Gunakan `wget` untuk mengunduh skrip:
+    ```sh
+    wget "https://raw.githubusercontent.com/AutoFTbot/UDP/main/install.sh" -O install.sh
+    ```
+
+2. **Hapus Karakter Carriage Return**
+
+   Konversi skrip dari format DOS ke format Unix/Linux:
+    ```sh
+    dos2unix install.sh
+    ```
+   Atau gunakan `sed`:
+    ```sh
+    sed -i 's/\r$//' install.sh
+    ```
+
+3. **Beri Izin Eksekusi**
+
+   Atur izin eksekusi pada skrip:
+    ```sh
+    chmod +x install.sh
+    ```
+
+4. **Jalankan Skrip**
+
+   Jalankan skrip:
+    ```sh
+    ./install.sh
+    ```
